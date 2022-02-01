@@ -1,4 +1,15 @@
 // downloader.go
+package downloader
+
+import (
+	"fmt"
+	"net/url"
+	"sync"
+	"github.com/netpple/iget/savepath"
+	"github.com/netpple/iget/fetcher"
+	"github.com/netpple/iget/collections"
+)
+
 type Downloader struct {
 	urlString string
 	savePath  *savepath.SavePath
@@ -39,7 +50,7 @@ func (d *Downloader) Get() error {
 	return nil
 }
 
-func (d *Downloader) downloadConcurrency(urls *Set) {
+func (d *Downloader) downloadConcurrency(urls *collections.Set) {
 	wg := sync.WaitGroup{}
 	wg.Add(urls.Len())
 

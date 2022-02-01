@@ -1,4 +1,14 @@
 // fetcher.go
+package fetcher
+
+import (
+	"fmt"
+	"net/http"
+	"io"
+	"io/ioutil"
+	"os"
+)
+
 func ReadHtml(urlString string) (string, error) {
 	resp, err := http.Get(urlString)
 	if err != nil {

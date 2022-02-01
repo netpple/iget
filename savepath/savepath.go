@@ -1,4 +1,12 @@
 // savepath.go
+package savepath
+
+import (
+	"os"
+	"path"
+	"fmt"
+)
+
 type SavePath struct {
 	savePath string
 }

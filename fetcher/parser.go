@@ -1,4 +1,12 @@
 // parser.go
+package fetcher
+
+import (
+	"fmt"
+	"regexp"
+	"github.com/netpple/iget/collections"
+)
+
 var imgElementRegex = regexp.MustCompile("<img.*?src=\"(.*?)\"[^\\>]+>")
 var urlRegex = regexp.MustCompile("(http:\\/\\/|https:\\/\\/)[a-z0-9]+([\\-\\.]{1}[a-z0-9]+)*\\.[a-z]{2,5}(:[0-9]{1,5})?(\\/.*\\.(jpg|jpeg|png|gif|svg|webp))?")
 

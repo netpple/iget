@@ -1,4 +1,6 @@
 // downloader_test.go
+package downloader
+
 func TestGet(t *testing.T) {
 	urlString := "https://velog.io/@kineo2k"
 

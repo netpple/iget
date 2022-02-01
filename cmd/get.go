@@ -5,9 +5,10 @@ This file is part of Sam's CLI myapp.
 package cmd
 
 import (
-	"fmt"
-
+	"net/url"
+	"errors"
 	"github.com/spf13/cobra"
+	"github.com/netpple/iget/downloader"
 )
 
 // getCmd represents the get command
